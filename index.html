@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - รวมป้ายความสำเร็จและโปรไฟล์</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --primary-color: #0066cc;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ส่วน Profile & Bio */
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .profile-bio {
+            font-size: 15px;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Social Profile Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* ส่วนแสดงป้ายความสำเร็จ (Badges Portfolio) */
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .badge-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .badge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+
+        .badge-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 12px;
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        .badge-issuer-logo {
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .badge-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .badge-date {
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+        }
+
+        .badge-footer {
+            margin-top: auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .verify-link {
+            font-size: 13px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .verify-link:hover {
+            text-decoration: underline;
+        }
+
+        .badge-status {
+            font-size: 12px;
+            background-color: #e6f4ea;
+            color: #137333;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/100" alt="Profile Avatar" class="profile-avatar">
+            <h1 class="profile-name">Vithoun Sihavong</h1>
+            
+            <p class="profile-bio">
+                มุ่งมั่นพัฒนาทักษะด้านปัญญาประดิษฐ์ (AI) คลาวด์คอมพิวติ้ง และการวิเคราะห์ข้อมูล เพื่อสร้างสรรค์ผลงานที่ถูกต้อง แม่นยำ และเข้าถึงได้ง่ายสำหรับทุกคน
+            </p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/your-profile-url" target="_blank" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/your-profile-url" target="_blank" class="social-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/your-profile-url" target="_blank" class="social-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:newrbeer24@gmail.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Credentials & Badges</h2>
+        <div class="badges-grid">
+
+            <div class="badge-card">
+                <div>
+                    <div class="badge-header">
+                        <span>Google Cloud Skills Boost</span>
+                        <span class="badge-status">Verified</span>
+                    </div>
+                    <div class="badge-title">Machine Learning Operations (MLOps) for Generative AI</div>
+                    <div class="badge-date">Earned: Aug 19, 2026</div>
+                </div>
+                <div class="badge-footer">
+                    <a href="https://www.cloudskillsboost.google/public_profiles/..." target="_blank" class="verify-link">ตรวจสอบใบรับรอง <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="badge-card">
+                <div>
+                    <div class="badge-header">
+                        <span>Google DeepMind</span>
+                        <span class="badge-status">Verified</span>
+                    </div>
+                    <div class="badge-title">Discover The Transformer Architecture</div>
+                    <div class="badge-date">Earned: Aug 2, 2026</div>
+                </div>
+                <div class="badge-footer">
+                    <a href="https://www.cloudskillsboost.google/public_profiles/..." target="_blank" class="verify-link">ตรวจสอบใบรับรอง <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="badge-card">
+                <div>
+                    <div class="badge-header">
+                        <span>Google Cloud</span>
+                        <span class="badge-status">Verified</span>
+                    </div>
+                    <div class="badge-title">Orchestrate Multi-agent Workflows with Gemini Enterprise</div>
+                    <div class="badge-date">Earned: Aug 19, 2026</div>
+                </div>
+                <div class="badge-footer">
+                    <a href="https://www.cloudskillsboost.google/public_profiles/..." target="_blank" class="verify-link">ตรวจสอบใบรับรอง <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+  </html>
+  
